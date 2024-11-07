@@ -1,0 +1,278 @@
+/* Base Styles & Typography */
+@font-face {
+    font-family: 'glacial_indifferencebold';
+    src: url('../fonts/glacialindifference-bold-webfont.woff2') format('woff2'),
+         url('../fonts/glacialindifference-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  :root {
+    --primary-color: #000;
+    --accent-color: #f53434;
+    --text-color: #000000;
+    --bg-color: #ffffff;
+  }
+  
+  /* Reset & Base Styles */
+  html, body {
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    font-family: YakuHanJP, "Work Sans", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Layout Structure */
+  .wrap {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 260px;
+  }
+  
+/*******************头部css样式******************/
+
+  /* 头部基础样式 */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    background: #fff;
+  }
+  
+  /* 头部容器*/
+  header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  /* Logo样式 */
+  header h1 {
+    font-size: 65px;
+    font-family:"Brush Script MT";
+    text-transform: uppercase;
+    color: #000;
+    margin: 0px 50px;
+  }
+
+  /* 头部图标样式 */
+  .sns-nav {
+    display: flex;
+    list-style: none; /* 去除默认的列表样式 */
+    padding: 0;
+    margin: 0;
+}
+
+.sns-nav li {
+    display: inline-block; /* 横向排列 */
+    margin-right: 10px; /* 每个图标之间的间距 */
+}
+
+.sns-nav a {
+    color: #333; /* 图标颜色 */
+    font-size: 24px; /* 图标大小 */
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+  /* 导航菜单样式 */
+  .menu-nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  
+  .menu-nav li {
+    display: inline-block;
+    padding: 0 0 0 20px;
+    font-family: 'glacial_indifferencebold', 'Roboto';
+  }
+  
+  .menu-nav li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    line-height: 1;
+    color: #000;
+    transition: color 0.2s ease;
+  }
+
+
+   /*滑动时顶部的效果*/
+  body.down header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    background: #ffffff;
+}
+
+  body.down header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+ body.down header h1 {
+    font-size: 30px;
+    font-family:"Brush Script MT";
+    text-transform: uppercase;
+    color: #000;
+    margin: 0px 50px;
+  }
+
+  body.down header .sns-nav{
+    display: none;
+  }
+
+/* 悬停效果 */
+.menu-nav li a:hover {
+    color: #f53434;
+}
+
+.sns-nav a:hover {
+    color: #683636;
+}
+
+/*******************头部css样式******************/
+
+  /* Hero Section */
+  .section--top {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .keyvisual {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .keyvisual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* News Section */
+  .section--info {
+    padding: 120px 0;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .block--news {
+    width: 26%;
+    margin-right: 11%;
+  }
+  
+  .block-tit {
+    font-family: 'glacial_indifferencebold', 'Roboto';
+    font-size: 50px;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+  }
+  
+  /* List Styles */
+  .list--information li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  .list--information a {
+    display: block;
+    color: inherit;
+    padding: 0;
+    position: relative;
+  }
+  
+  .list--information .date {
+    font-family: 'glacial_indifferencebold', 'Roboto';
+    line-height: 1;
+    display: inline-block;
+    margin: 0 0 5px;
+  }
+  
+  /* Hover Effects */
+  .hover-base {
+    background: linear-gradient(transparent 50%, var(--accent-color) 0);
+    background-size: 97% 200%;
+    background-position: 0 0;
+    transition: all 0.1s ease;
+  }
+  
+  a:hover span.line-animation {
+    background-position: 0 50%;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  footer .sns-nav {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  footer .sns-nav li {
+    display: inline-block;
+    margin: 0 18px;
+  }
+  
+  footer .copyright {
+    text-align: center;
+    padding-bottom: 40px;
+    font-family: 'glacial_indifferencebold', 'Roboto';
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 960px) {
+    header h1 {
+      width: 110px;
+    }
+    
+    .menu-nav li a {
+      font-size: 14px;
+    }
+    
+    .section--info {
+      width: 100%;
+      display: block;
+      padding: 120px 10% 0;
+    }
+    
+    .block--news {
+      width: 100%;
+      margin: 0 auto 60px;
+    }
+  }
+  
+  /* Utility Classes */
+  .sp {
+    display: none !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sp {
+      display: block !important;
+    }
+    
+    .pc {
+      display: none !important;
+    }
+  }
